@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>mini projeto js</title>
+</head>
+<body>
+    <header>
+        <input type="text" id="busca" placeholder="pesquisar por titulo" oninput="pesquisarTarefa()">
+    </header>
+    <main>
+        <section id="tarefas">
+            <h2>Tarefas <button type="submit" onclick="abrirModal()">Nova tarefa</button></h2>
+            <ul id="lista"></ul>
+        </section>
+
+        <section id="overlay" onclick="fecharModal()"></section>
+        <div class="modal" id="criarTarefa">
+            <form action="" onsubmit="novaTarefa()">
+                <h3>Criar tarefa <img  id="fechar"   src="icon/cross.svg" alt="botao de saida" width="15" height="15" onclick="fecharModal()"></h3>
+                <label for="titulo">Titulo</label>
+                <input type="text" id="titulo" required>
+                <label for="descricao">Descrição</label>
+                <textarea id="descricao" required></textarea>
+                <button type="submit">Criar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
+
